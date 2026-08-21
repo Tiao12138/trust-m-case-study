@@ -1,0 +1,374 @@
+/* ============================================================
+   Case Study page styles — extends realdealstyl.css
+   Palette:  bg #FBF9F5 · text #444 · accent #7953B3 · warm #F28500
+   ============================================================ */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #FBF9F5;
+}
+
+.cs-wrap {
+  max-width: 78rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ---------- Hero ---------- */
+
+.cs-hero {
+  position: relative;
+  padding: 6rem 0 4rem;
+  background-image:
+    linear-gradient(180deg, rgba(20, 16, 28, 0.15) 0%, rgba(20, 16, 28, 0.72) 100%),
+    url('images/p2-3/p3-1.png');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  border-bottom: 1px solid #EDE8E0;
+}
+
+.cs-hero-icon {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 9rem;
+  height: auto;
+  z-index: 2;
+}
+
+.cs-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 78rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.cs-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #D9C9F0;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.cs-eyebrow::before {
+  content: "";
+  width: 1.6rem;
+  height: 1px;
+  background: #D9C9F0;
+  display: inline-block;
+}
+
+.cs-hero h1 {
+  font-size: 3rem;
+  line-height: 1.1;
+  margin: 0 0 1rem;
+  color: #FFF;
+  font-weight: 700;
+  max-width: 34rem;
+}
+
+.cs-hero .cs-dek {
+  font-size: 1.25rem;
+  color: #F4F0FA;
+  max-width: 32rem;
+  margin: 0 0 1.5rem;
+  line-height: 1.5;
+}
+
+.cs-collab {
+  font-size: 0.95rem;
+  color: #D8D0E4;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.cs-hero-lede {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 40rem;
+  color: #EDE8F2;
+}
+
+.cs-hero-lede a { font-style: normal; color: #E3D3FF; text-decoration: underline; }
+.cs-hero-lede a:hover { color: #FFF; }
+
+/* ---------- Meta strip (keywords / skills) ---------- */
+
+.cs-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 2.25rem 0;
+  border-bottom: 1px solid #EDE8E0;
+}
+
+.cs-meta h3 {
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #7953B3;
+  margin: 0 0 0.9rem;
+  font-weight: 600;
+}
+
+.cs-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.cs-chips li {
+  font-size: 0.95rem;
+  color: #444;
+  padding: 0.35rem 0.85rem;
+  border: 1px solid #E3DCF0;
+  border-radius: 999px;
+  background: #F7F4FB;
+}
+
+/* ---------- Generic section rhythm ---------- */
+
+.cs-section {
+  padding: 3.5rem 0;
+  border-bottom: 1px solid #EDE8E0;
+}
+
+.cs-section:last-of-type { border-bottom: none; }
+
+.cs-section h2 {
+  font-size: 1.75rem;
+  color: #2E2E2E;
+  font-weight: 700;
+  margin: 0 0 1.5rem;
+}
+
+.cs-section p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #444;
+  margin: 0 0 1.1rem;
+}
+
+.cs-section a { color: #7953B3; font-style: normal; }
+.cs-section a:hover { color: #444; }
+
+.cs-figure { margin: 1.75rem 0; }
+.cs-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  display: block;
+}
+.cs-caption {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 0.6rem;
+}
+
+.cs-two-col {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* ---------- Methodology cards ---------- */
+
+.cs-methods {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.cs-method-card img {
+  width: 100%;
+  height: 14rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.cs-method-card h4 {
+  font-size: 1.05rem;
+  color: #2E2E2E;
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+}
+
+.cs-method-card p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ---------- Findings — numbered accordion (signature element) ---------- */
+
+.cs-findings {
+  margin-top: 1rem;
+}
+
+.cs-finding {
+  position: relative;
+  padding: 1.75rem 0 1.75rem 4rem;
+  border-top: 1px solid #EDE8E0;
+}
+
+.cs-finding:last-child { border-bottom: 1px solid #EDE8E0; }
+
+.cs-finding-num {
+  position: absolute;
+  left: 0;
+  top: 1.5rem;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #E3DCF0;
+  line-height: 1;
+}
+
+.cs-finding summary {
+  cursor: pointer;
+  list-style: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2E2E2E;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.cs-finding summary::-webkit-details-marker { display: none; }
+
+.cs-finding summary::after {
+  content: "+";
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #7953B3;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.cs-finding[open] summary::after { transform: rotate(45deg); }
+
+.cs-finding-body {
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #444;
+}
+
+.cs-finding-body img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+
+/* ---------- Workshop — three columns side by side ---------- */
+
+.cs-workshop-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 1.5rem;
+}
+
+.cs-workshop-col p {
+  font-size: 1rem;
+}
+
+/* ---------- Workshop task callout ---------- */
+
+.cs-task {
+  border-left: 3px solid #F28500;
+  padding: 1rem 1.25rem;
+  background: #FFF8EE;
+  border-radius: 0 0.5rem 0.5rem 0;
+  margin-top: 1.25rem;
+}
+
+.cs-task strong {
+  color: #F28500;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cs-task ul {
+  margin: 0.6rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.cs-task li {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 0.4rem;
+}
+
+/* ---------- Outcome gallery ---------- */
+
+.cs-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.cs-gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 0.4rem;
+  border: 1px solid #EDE8E0;
+  background: #fff;
+}
+
+/* ---------- Back to top ---------- */
+
+.cs-top {
+  display: block;
+  text-align: center;
+  padding: 3rem 0 4rem;
+}
+
+.cs-top a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: #7953B3;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.cs-top a:hover { color: #444; }
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+  html { font-size: 15px; }
+  .cs-hero { padding: 3.5rem 0 3rem; }
+  .cs-hero h1 { font-size: 2.1rem; }
+  .cs-hero-icon { width: 5rem; }
+  .cs-meta { grid-template-columns: 1fr; gap: 1.5rem; }
+  .cs-two-col { grid-template-columns: 1fr; }
+  .cs-methods { grid-template-columns: 1fr; }
+  .cs-workshop-row { grid-template-columns: 1fr; }
+  .cs-gallery { grid-template-columns: repeat(2, 1fr); }
+}
